@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Innovative Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <h1>Innovative Tracker</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard" class="active">Dashboard</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="dashboard-welcome">
+      <h1>Welcome to Your Dashboard!</h1>
+      <p>You have successfully logged in</p>
+    </div>
+
+    <div class="dashboard-content">
+      <h2>Your Profile</h2>
+      <div class="user-info">
+        <div class="info-row">
+          <span class="info-label">Username:</span>
+          <span class="info-value" id="displayUsername">User</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email:</span>
+          <span class="info-value" id="displayEmail">email@example.com</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Member Since:</span>
+          <span class="info-value" id="joinDate">--</span>
+        </div>
+      </div>
+
+      <button class="btn btn-logout btn-block" onclick="logout()">Logout</button>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Innovative Tracker. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Display user info (in a real app, this would come from server)
+    function displayUserInfo() {
+      const userDataStr = localStorage.getItem('userData');
+      if (userDataStr) {
+        const userData = JSON.parse(userDataStr);
+        document.getElementById('displayUsername').textContent = userData.username || 'User';
+        document.getElementById('displayEmail').textContent = userData.email || 'N/A';
+        document.getElementById('joinDate').textContent = new Date().toLocaleDateString();
+      } else {
+        // Redirect to login if no user data
+        window.location.href = '/login';
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('userData');
+      window.location.href = '/';
+    }
+
+    // Load user info on page load
+    window.addEventListener('load', displayUserInfo);
+  </script>
+</body>
+</html>

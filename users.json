@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser",
+      "email": "test@example.com",
+      "password": "$2a$10$MOjX1wzURZH0d4tu7ZONUeITQc6lLd98gd8U4bZo/uskvdfZwSN72",
+      "created_at": "2026-02-24T13:27:22.406Z"
+    },
+    {
+      "id": 2,
+      "username": "mani sharan",
+      "email": "manisharanreddy@gmail.com",
+      "password": "$2a$10$jCAtI2Tq2P0j.UjyTEnCKOw9nDTldTjzq2aVDHpAWgkFY3klpKuDy",
+      "created_at": "2026-02-24T13:34:23.875Z"
+    }
+  ],
+  "nextId": 3
+}

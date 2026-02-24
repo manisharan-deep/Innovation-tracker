@@ -1,0 +1,18 @@
+{
+  "name": "auth-website",
+  "version": "1.0.0",
+  "description": "Website with Login and Registration pages",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["login", "registration", "website"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "bcryptjs": "^2.4.3"
+  }
+}

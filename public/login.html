@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Innovative Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <h1>Innovative Tracker</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/login" class="active">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="auth-container">
+      <div class="auth-box">
+        <h2>Login to Your Account</h2>
+        
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input 
+              type="text" 
+              id="username" 
+              name="username" 
+              placeholder="Enter your username"
+              required
+            >
+            <span class="error-message" id="usernameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="Enter your password"
+              required
+            >
+            <span class="error-message" id="passwordError"></span>
+          </div>
+
+          <div id="generalError" class="error-message"></div>
+          <div id="successMessage" class="success-message"></div>
+
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+
+        <p class="auth-link">
+          Don't have an account? <a href="/register">Register here</a>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Innovative Tracker. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
