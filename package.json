@@ -1,8 +1,11 @@
 {
-  "name": "auth-website",
+  "name": "innovation-tracker",
   "version": "1.0.0",
   "description": "Website with Login and Registration pages",
   "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
